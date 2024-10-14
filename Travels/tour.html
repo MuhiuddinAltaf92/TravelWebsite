@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- cdn link-- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap link-- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Tour review</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+          h1{
+            font-family: "Dancing Script", cursive;
+            color: black;
+          }
+          h1:hover{
+            color: #0056b3;
+          }
+        /* General styles */
+        .card-img-top {
+            height: 200px;
+            width: 100%;
+            /* Make image full width for responsiveness */
+        }
+
+        .pagereview {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+            /* Light background color */
+        }
+
+        .package-card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .card-body {
+            text-align: center;
+            /* Center align text */
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #343a40;
+            /* Dark text color */
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+            /* Gray text color */
+        }
+
+
+        .btn-primary {
+            background-color: rgb(16, 160, 165);
+            /* Primary color */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #155043;
+            /* Darker shade on hover */
+        }
+
+        /* Centering headers */
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            /* Center the headers */
+            margin-bottom: 40px;
+            /*Space below headers */
+            color: #0056b3;
+        }
+
+        /* Rating styles */
+        .rating {
+            color: #0f723c;
+            /* Gold color for stars */
+            margin: 10px 0;
+            /* Spacing above and below the rating */
+        }
+
+        .rating i {
+            font-size: 1rem;
+            /* Adjust size as needed */
+        }
+
+        /* Button styles */
+        .btn {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            /* Darker shade of blue */
+            transform: scale(1.05);
+            /* Slightly enlarge the button */
+        }
+
+        /* Customer Review Form */
+        .customer-review {
+            padding: 40px;
+            /* Adjust padding for the whole form */
+            background-color: #096986;
+            /* Green background color */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+            display: flex;
+            /* Flexbox for centering */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            margin: 0 auto;
+            /* Center the form container */
+            max-width: 1000px;
+            /* Max width for the form */
+        }
+
+        .customer-review .form-container {
+            width: 100%;
+            /* Full width for smaller screens */
+            background-color: #fff;
+            /* White background for the form */
+            padding: 20px;
+            /* Padding inside the form */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Shadow for form */
+        }
+
+        .customer-review h2 {
+            text-align: center;
+            /* Center the heading */
+            margin-bottom: 20px;
+            /* Space below heading */
+            color: #ffffff;
+            /* White text for heading */
+        }
+
+        .customer-review .form-control {
+            border-radius: 0.25rem;
+            /* Rounded corners */
+        }
+
+        .customer-review label {
+            margin-bottom: 5px;
+            /* Add space below the label */
+            display: block;
+            /* Make labels block elements for better spacing */
+            font-weight: 600;
+        }
+
+        .customer-review button {
+            margin-top: 10px;
+            background-color: #0a4e63;
+            /* Green background for button */
+            color: white;
+            /* White text for button */
+            border: none;
+            /* Remove border */
+            border-radius: 5px;
+            /* Rounded corners */
+            padding: 10px 20px;
+            /* Padding for button */
+            font-size: 1rem;
+            /* Font size */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Smooth transition */
+        }
+
+        .customer-review button:hover {
+            background-color: #0e3946;
+            /* Darker shade on hover */
+            transform: scale(1.05);
+            /* Slightly enlarge the button */
+        }
+
+        /* #isl{
+  height: 10% !important;
+  width: 50% !important;
+} */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class=" nav__logo">
+            <ahref="#" class="logo"> <img src="assets/logo2.png" style="width: 60%;" alt=""></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="international.html">TRIP CATALOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="tour.html">TOUR REVIEW</a></li>
+    
+          <li><a href="#">BOOK TRIP</a></li>
+        </ul>
+        <div class="nav__btns">
+          <button class="btn">Secure Journeys
+          </button>
+        </div>
+      </nav>
+    <!-- customer reviews -->
+
+    <section class="pagereview" id="pagereview">
+        <div class="container">
+            <h1>"International Tours"</h1>
+            <div class="row mx-0 px-0 justify-content-center">
+                <!-- card 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/germany.1.jpg" class="card-img-top imgsize" alt="Germany Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Germany Adventure Package</h5>
+                            <p class="card-text">Explore the beautiful landscapes and rich history of Germany. Includes
+                                city tours,
+                                accommodation, and meals.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/germany.1.jpg','Package Name :Germany Adventure Package','Package Price : 800$','Package Description : Explore')">View
+                                Package</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- card 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/france1.jpg" class="card-img-top imgsize" alt="France Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Romantic France Getaway</h5>
+                            <p class="card-text">Indulge in a romantic trip through Paris and the French countryside.
+                                Includes
+                                sightseeing and dining experiences.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/france1.jpg','Package Name :Romantic France Getaway','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/spain.1.jpg" class="card-img-top imgsize" alt="Spain Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Spain Tour</h5>
+                            <p class="card-text">Experience the vibrant culture and history of Spain. Package includes
+                                guided
+                                tours
+                                and local cuisine tastings.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/spain.1.jpg','Package Name :Cultural Spain Tour','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mx-0 px-0 justify-content-center">
+                <!-- card 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/australia 1.jpg" class="card-img-top imgsize" alt="Germany Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Adventure in Australia Tour</h5>
+                            <p class="card-text">Experience the breathtaking landscapes and vibrant culture of
+                                Australia. Includes wildlife encounters and city explorations.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/australia 1.jpg','Package Name :Adventure in Australia Tour','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/dubai 1.jpg" class="card-img-top imgsize" alt="France Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Dubai Escape</h5>
+                            <p class="card-text">Experience the glamour and excitement of Dubai, featuring luxury
+                                shopping, stunning architecture, and vibrant nightlife.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/dubai 1.jpg','Package Name :Luxury Dubai Escape','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/singapore 2.jpg" class="card-img-top imgsize" alt="Spain Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Ultimate Singapore Experience</h5>
+                            <p class="card-text">
+                                Immerse yourself in the stunning cityscape and diverse culture of Singapore. This
+                                package includes visits to iconic landmarks, thrilling attractions, and local food
+                                markets.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/singapore 2.jpg','Package Name :Ultimate Singapore Experience','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h1> Domestic Tour</h1>
+            <div class="row mx-0 px-0 justify-content-center">
+                <!-- card 7 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/islamabad 1.jpg" class="card-img-top imgsize" alt="Germany Package" id="isl">
+                        <div class="card-body">
+                            <h5 class="card-title">Islamabad Cultural Experience</h5>
+                            <p class="card-text">Discover the stunning beauty and rich heritage of Islamabad. Package
+                                includes guided tours, local cuisine, and visits to historical sites.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('<span>images/islamabad 1.jpg<span/>','Package Name :Islamabad Cultural Experience','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 8 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/naran 1.jpg" class="card-img-top imgsize" alt="France Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Naran Nature Retreat</h5>
+                            <p class="card-text">Unwind in the stunning beauty of Naran. This package includes scenic
+                                hikes, serene lakes, and a chance to connect with nature.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/naran 1.jpg','Package Name :Naran Nature Retreat','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 9 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xm-12 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/KASHMIR 2.jpg" class="card-img-top imgsize" alt="Spain Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Kashmir Paradise Tour</h5>
+                            <p class="card-text">Immerse yourself in the breathtaking landscapes of Kashmir. This
+                                package includes houseboat stays, local cuisine, and guided tours of stunning valleys.
+                            </p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                onclick="pDetail('images/KASHMIR 2.jpg','Package Name :Kashmir Paradise Tour','Package Price : 800$','Package Description : Explore')"
+                                b>View Package</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- customer reviews -->
+
+    <!-- customer review form -->
+    <section class="customer-review" id="customer-review">
+        <div class="container">
+            <h2 class="text-center mb-4">Customer feedback</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select class="form-control" id="rating" required>
+                        <option value="">Select Rating</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">feedback</label>
+                    <textarea class="form-control" id="review" rows="4" placeholder="Your feedback" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+    <!-- customer review form -->
+<!-- FOOTER  -->
+<footer id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="footer__logo">
+          <a href="#" class="logo">GlobeTrek</a>
+        </div>
+        <p>
+          Explore the world with ease and excitement through our comprehensive
+          travel platform. Your journey begins here, where seamless planning
+          meets unforgettable experiences.
+        </p>
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-youtube-line"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Flights</a></li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Cruise</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <ul class="footer__links">
+          <li>
+            <a href="#">
+              <span><i class="ri-phone-fill"></i></span> +92 9876543210
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span><i class="ri-record-mail-line"></i></span> info@globetrek.com
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span><i class="ri-map-pin-2-fill"></i></span> Karachi, Pakistan
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Feedback</h4>
+        <form id="feedback-form">
+          <input type="text" id="feedback-input" placeholder="Enter your Feedback" required />
+          <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 GlobeTrek. All rights reserved.
+    </div>
+  </footer>
+
+
+    <!-- modal -->
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        view Package
+    </button> -->
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="pImg" width="100%" alt="">
+                    <h3 id="pName"></h3>
+                    <h3 id="pPrice"></h3>
+                    <p id="pDesc"></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('reviewForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Gather form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const rating = document.getElementById('rating').value;
+        const review = document.getElementById('feedback').value;
+
+        // Example: Log the data (you can replace this with an actual submission to a server)
+        console.log({ name, email, rating, feedback });
+
+        // Clear the form
+        this.reset();
+    });
+
+</script>
+<script>
+    function pDetail(i, n, p, d) {
+        document.getElementById('pImg').src = i;
+        document.getElementById('pName').innerHTML = n;
+        document.getElementById('pPrice').innerHTML = p;
+        document.getElementById('pDesc').innerHTML = d;
+    }
+    
+</script>
+
+</html>

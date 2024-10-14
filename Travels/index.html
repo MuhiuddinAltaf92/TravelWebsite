@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>GlobeTrek</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class=" nav__logo">
+        <ahref="#" class="logo"> <img src="assets/logo2.png" style="width: 60%;" alt=""></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="international.html">TRIP CATALOG</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="tour.html">TOUR REVIEW</a></li>
+
+      <li><a href="#">BOOK TRIP</a></li>
+    </ul>
+    <div class="nav__btns">
+      <button class="btn">Secure Journeys
+      </button>
+    </div>
+  </nav>
+  <!-- HEADER  -->
+  <header id="home">
+    <div class="header__container">
+      <div class="header__content">
+        <p>UNLEASH YOUR WANDERLUST</p>
+        <h1>Lift Off to New Horizons!</h1>
+        <div class="header__btns">
+          <button class="btn">Start Your Travel Journey Now!</button>
+          <a href="#">
+            <span><i class="ri-play-circle-fill"></i></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- QUERY FORM  -->
+  <div class="contact-form-container">
+    <div class="contact-form">
+      <div class="form-heading">
+        <h2>"Your Queries"</h2>
+      </div>
+      <form class="query-form">
+        <div class="form-field">
+          <label for="name">Full name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-field">
+          <label for="where-to">Where to</label>
+          <input type="text" id="where-to" name="where-to" placeholder="Where to" required>
+        </div>
+        <div class="form-field">
+          <label for="travel-type">Travel type</label>
+          <input type="text" id="travel-type" name="travel-type" placeholder="Enter travel type" required>
+        </div>
+        <div class="form-field full-width">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- POPULAR DESTINATION -->
+  <section class="section__container destination__container" id="about">
+    <h1 class="section__header">Popular<span class="text-primary"> Destination</span></h1>
+    <p class="section__description">
+      Discover the Most Loved Destinations Around the Globe
+    </p>
+    <div class="destination__grid">
+      <div class="destination__card">
+        <img src="assets/pop-1.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Tradition and Futurism</h4>
+            <p>New York City, USA</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.7
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/pop-2.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Hearts in Harmony</h4>
+            <p>Bangkok, Thailand</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.5
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/pop-3.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Tropical Dreamland</h4>
+            <p>Tokyo, Japan</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.8
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- INTERNATIONAL PACKAGES -->
+  <section class="section__container destination__container" id="about">
+    <h1 class="section__header">International<span class="text-primary"> Packages</span></h1>
+    <p class="section__description">
+      Discover the Most Loved Destinations Around the Globe
+    </p>
+    <div class="destination__grid">
+      <div class="destination__card">
+        <img src="assets/int-1.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Heritage Meets Innovation</h4>
+            <p>Male , Maldives</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.7
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/int-2.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>The Oasis of Innovation</h4>
+            <p>Dubai , UAE</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.5
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/int-3.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Heaven on Earth</h4>
+            <p>Bali, Indonesia</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.8
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/int-4.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Island of Bliss"</h4>
+            <p>Santorini, Greece</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.9
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/int-5.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Architectural Wonderland</h4>
+            <p>Barcelona, Spain</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.3
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/int-6.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Bosphorus Beauty</h4>
+            <p>Istanbul, Turkey</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.6
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- DOMESTIC PACKAGES  -->
+  <section class="section__container destination__container" id="about">
+    <h1 class="section__header">Domestic<span class="text-primary"> Packages</span></h1>
+    <p class="section__description">
+      Explore the Most Cherished Destinations Within the Country
+    </p>
+    <div class="destination__grid">
+      <div class="destination__card">
+        <img src="assets/dom-1.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Paradise on Earth</h4>
+            <p>Hunza Valley</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.7
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/dom-2.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Majestic Serenity</h4>
+            <p>Skardu</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.5
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/dom-3.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Mountain Oasis</h4>
+            <p>Swat Valley</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.8
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UMRAH AND HAJJ PACKAGES  -->
+  <section class="section__container destination__container" id="about">
+    <h1 class="section__header">Umrah & Hajj<span class="text-primary"> Packages</span></h1>
+    <p class="section__description">
+      Experience the Essence of Umrah and Hajj
+    </p>
+    <div class="destination__grid">
+      <div class="destination__card">
+        <img src="assets/umr-1.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Deluxe Hajj Maktab A-D</h4>
+            <p>Hajj Packages</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.7
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/umr-2.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Customized Packages </h4>
+            <p>Umrah</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.5
+          </div>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="assets/umr-3.jpg" alt="destination" />
+        <div class="destination__card__details">
+          <div>
+            <h4>Complete Group Packages</h4>
+            <p>Umrah</p>
+          </div>
+          <div class="destination__rating">
+            <span><i class="ri-star-fill"></i></span>
+            4.8
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section__container journey__container" id="tour">
+    <h2 class="section__header">Journey To The Sky Made Simple!</h2>
+    <p class="section__description">
+      Effortless Planning for Your Next Adventure
+    </p>
+    <div class="journey__grid">
+      <div class="journey__card">
+        <div class="journey__card__bg">
+          <span><i class="ri-bookmark-3-line"></i></span>
+          <h4>Seamless Booking Process</h4>
+        </div>
+        <div class="journey__card__content">
+          <span><i class="ri-bookmark-3-line"></i></span>
+          <h4>Easy Reservations, One Click Away</h4>
+          <p>
+            From flights and accommodations to activities and transfers,
+            everything you need is available at your fingertips, making travel
+            planning effortless.
+          </p>
+        </div>
+      </div>
+      <div class="journey__card">
+        <div class="journey__card__bg">
+          <span><i class="ri-landscape-fill"></i></span>
+          <h4>Tailored Itineraries</h4>
+        </div>
+        <div class="journey__card__content">
+          <span><i class="ri-landscape-fill"></i></span>
+          <h4>Customized Plans Just for You</h4>
+          <p>
+            Enjoy personalized travel plans designed to match your preferences
+            and interests. Whether you seek adventure or cultural immersion,
+            our tailored itineraries ensure your journey is uniquely yours.
+          </p>
+        </div>
+      </div>
+      <div class="journey__card">
+        <div class="journey__card__bg">
+          <span><i class="ri-map-2-line"></i></span>
+          <h4>Expert Local Insights</h4>
+        </div>
+        <div class="journey__card__content">
+          <span><i class="ri-map-2-line"></i></span>
+          <h4>Insider Tips and Recommendations</h4>
+          <p>
+            We provide curated recommendations for dining, sightseeing, and
+            hidden gems, so you can experience each destination like a local.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container showcase__container" id="package">
+    <div class="showcase__image">
+      <img src="assets/showcase.jpg" alt="showcase" />
+    </div>
+    <div class="showcase__content">
+      <h4>UNLEASH WANDERLUST</h4>
+      <p>
+        Embark on a Journey Like No Other with GlobeTrek
+
+        Discover a world where your travel dreams come to life. GlobeTrek is dedicated to inspiring and facilitating
+        your adventures, whether you’re drawn to the vibrant pulse of cityscapes, the serene beauty of pristine beaches,
+        or the rich history of ancient landmarks. We offer expertly curated destinations and personalized itineraries,
+        ensuring each trip is perfectly tailored to your preferences. Explore hidden gems, dive into diverse cultures,
+        and create unforgettable memories that will last a lifetime.
+      </p>
+      <!-- <p>
+        With GlobeTrek as your ultimate travel companion, discovering the wonders of the world has never been easier.
+        Our insider tips and local insights empower you to explore new places with confidence and excitement. From the
+        initial planning stages to your journey home, we are committed to making your travel experience seamless and
+        enriching.
+      </p> -->
+      <div class="showcase__btn">
+        <button class="btn">
+          Book A Flight Now
+          <span><i class="ri-arrow-right-line"></i></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container banner__container">
+    <div class="banner__card">
+      <h4>10+</h4>
+      <p>Years Experience</p>
+    </div>
+    <div class="banner__card">
+      <h4>12K</h4>
+      <p>Happy Clients</p>
+    </div>
+    <div class="banner__card">
+      <h4>4.8</h4>
+      <p>Overall Ratings</p>
+    </div>
+  </section>
+
+  <section class="section__container discover__container">
+    <h2 class="section__header">Discover The World From Above</h2>
+    <p class="section__description">
+      Experience Breathtaking Views and Unique Perspectives
+    </p>
+    <div class="discover__grid">
+      <div class="discover__card">
+        <span><i class="ri-camera-lens-line"></i></span>
+        <h4>Aerial Cityscapes</h4>
+        <p>
+          Witness the architectural marvels and bustling streets from
+          bird's-eye view, offering a unique perspective.
+        </p>
+      </div>
+      <div class="discover__card">
+        <span><i class="ri-ship-line"></i></span>
+        <h4>Coastal Wonders</h4>
+        <p>
+          Fly over pristine coastlines and turquoise waters, revealing hidden
+          coves and vibrant coral reefs.
+        </p>
+      </div>
+      <div class="discover__card">
+        <span><i class="ri-landscape-line"></i></span>
+        <h4>Historic Landmarks</h4>
+        <p>
+          Observe the grandeur of ancient castles and other significant sites
+          in a way that ground tours can't offer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container client__container">
+    <h2 class="section__header">Loved By Over Thousand Travelers</h2>
+    <p class="section__description">
+      Discover the stories of wanderlust and cherished memories through the
+      eyes of our valued clients.
+    </p>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="client__card">
+            <div class="client__content">
+              <div class="client__rating">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <p>
+                "Planning my travels used to be a hassle, but GlobeTrek made it effortless. Their user-friendly platform
+                simplified booking flights and accommodations. Personalized recommendations and a seamless process
+                enhanced my travel experience. I’m excited to plan my next adventure with GlobeTrek!"
+              </p>
+            </div>
+            <div class="client__details">
+              <img src="assets/client-1.jpg" alt="client" />
+              <div>
+                <h4>Muhammad Hasan</h4>
+                <h5>Travel Blogger</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client__card">
+            <div class="client__content">
+              <div class="client__rating">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <p>
+                "GlobeTrek changed my travel planning game. Their service provided detailed itineraries and local
+                insights, making my trip smooth and enjoyable. Tailored recommendations ensured a perfect travel
+                experience. Highly recommend GlobeTrek for effortless planning.""
+              </p>
+            </div>
+            <div class="client__details">
+              <img src="assets/client-2.jpg" alt="client" />
+              <div>
+                <h4>Insia Khan</h4>
+                <h5>Adventure Enthusiast</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client__card">
+            <div class="client__content">
+              <div class="client__rating">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <p>
+                "GlobeTrek made my trip smooth and memorable. Their platform and recommendations covered every detail,
+                from flights to local attractions. It was a stress-free experience, and I’m looking forward to future
+                travels with GlobeTrek."
+              </p>
+            </div>
+            <div class="client__details">
+              <img src="assets/client-3.jpg" alt="client" />
+              <div>
+                <h4>Aisha Memon</h4>
+                <h5>Cultural Historian</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client__card">
+            <div class="client__content">
+              <div class="client__rating">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <p>
+                "GlobeTrek made my trip unforgettable. Their intuitive platform allowed effortless planning and booking.
+                Tailored travel suggestions and smooth coordination made every aspect of my journey enjoyable. Impressed
+                with their service and excited to use GlobeTrek for future travels."
+            </div>
+            <div class="client__details">
+              <img src="assets/client-4.jpg" alt="client" />
+              <div>
+                <h4>Zia Altaf</h4>
+                <h5>Business Executive</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- FOOTER  -->
+  <footer id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="footer__logo">
+          <a href="#" class="logo">GlobeTrek</a>
+        </div>
+        <p>
+          Explore the world with ease and excitement through our comprehensive
+          travel platform. Your journey begins here, where seamless planning
+          meets unforgettable experiences.
+        </p>
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-youtube-line"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Flights</a></li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Cruise</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <ul class="footer__links">
+          <li>
+            <a href="#">
+              <span><i class="ri-phone-fill"></i></span> +92 9876543210
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span><i class="ri-record-mail-line"></i></span> info@globetrek.com
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span><i class="ri-map-pin-2-fill"></i></span> Karachi, Pakistan
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Feedback</h4>
+        <form id="feedback-form">
+          <input type="text" id="feedback-input" placeholder="Enter your Feedback" required />
+          <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 GlobeTrek. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
